@@ -50,7 +50,7 @@ struct worker_data_t
 	boost::int64_t sum;
 	int lower_bound;
 	int upper_bound;
-	long reserved[6];	// NOTE!!! This need for cache line data align. Without this code doesn't work properly. 
+	char unused[53];	// NOTE!!! This need for cache line data align. Without this code doesn't work properly. 
 	// Data size shoul be larger than cache line size (in my case it's 64 bytes)
 };
 
